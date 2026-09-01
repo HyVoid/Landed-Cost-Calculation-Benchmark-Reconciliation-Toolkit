@@ -1,0 +1,246 @@
+@import "tailwindcss";
+
+:root {
+  /* ── Clean Minimalism Core Palette ── */
+  --brand: #051C2C;
+  --accent: #2251FF;
+  --grey: #888888;
+  --edit: #FFFDE7;
+
+  --color-primary: #051C2C;
+  --color-accent: #2251FF;
+  --color-bg: #F5F5F2;
+  --color-muted: #888888;
+  --color-body-text: #1A1A2E;
+
+  /* ── Semantic States ── */
+  --color-positive: #00C853;
+  --color-negative: #D32F2F;
+
+  /* ── Surface & Borders ── */
+  --color-surface: #FFFFFF;
+  --color-input-bg: #FFFDE7;
+  --color-border: #E5E5E5;
+
+  /* ── Navigation ── */
+  --nav-bg: #FFFFFF;
+  --nav-border: #E5E5E5;
+  --nav-text: #051C2C;
+  --nav-text-inactive: #6B7280;
+
+  /* ── Tables & Cards ── */
+  --table-header-bg: rgba(5, 28, 44, 0.03);
+  --table-header-sep: rgba(0, 0, 0, 0.08);
+
+  /* ── Insight & Highlight ── */
+  --insight-bg: rgba(5, 28, 44, 0.04);
+  --anomaly-bg: rgba(211, 47, 47, 0.04);
+
+  /* ── Typography ── */
+  --font-heading: 'EB Garamond', Georgia, serif;
+  --font-body: 'Noto Sans SC', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* ── Type Tracking ── */
+  --tracking-display: -0.03em;
+  --tracking-heading: -0.02em;
+  --tracking-label: 0.06em;
+
+  /* ── Radius System ── */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 14px;
+  --radius-pill: 9999px;
+
+  /* ── Shadow System ── */
+  --shadow-sm: 0 1px 3px rgba(5, 28, 44, 0.04), 0 1px 2px rgba(5, 28, 44, 0.02);
+  --shadow-md: 0 4px 12px rgba(5, 28, 44, 0.06), 0 2px 4px rgba(5, 28, 44, 0.03);
+  --shadow-lg: 0 12px 28px rgba(5, 28, 44, 0.09), 0 4px 10px rgba(5, 28, 44, 0.04);
+  --shadow-nav: 0 1px 0px #E5E5E5;
+
+  /* ── Transitions ── */
+  --ease-standard: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --dur-fast: 150ms;
+  --dur-normal: 220ms;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-body-text);
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.55;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.serif {
+  font-family: 'EB Garamond', Georgia, serif;
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.garamond-title {
+  font-family: var(--font-heading);
+  letter-spacing: var(--tracking-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* Clean Minimalism Card */
+.card-elevated {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--dur-normal) ease, box-shadow var(--dur-normal) ease;
+}
+
+.card-elevated:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Action Button */
+.action-btn {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.2s;
+  border: 1px solid #E5E5E5;
+  background: white;
+  color: var(--brand);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.action-btn:hover {
+  background: #F5F5F2;
+  border-color: #D1D5DB;
+}
+
+.action-btn-primary {
+  background: var(--brand);
+  color: white;
+  border: none;
+}
+
+.action-btn-primary:hover {
+  background: #0D2C42;
+}
+
+.action-btn-danger {
+  color: #DC2626;
+  border-color: #FEE2E2;
+}
+
+.action-btn-danger:hover {
+  background: #FEF2F2;
+  border-color: #FCA5A5;
+}
+
+/* Pill status tag */
+.pill {
+  border-radius: 9999px;
+  padding: 2px 8px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Input Cell */
+.input-cell, .input-editable {
+  background-color: var(--edit);
+  border: 1px solid rgba(5, 28, 44, 0.15);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--dur-fast) ease, box-shadow var(--dur-fast) ease;
+}
+
+.input-cell:focus, .input-editable:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(34, 81, 255, 0.18);
+}
+
+/* Insight Card */
+.insight-card, .insight-block {
+  background: var(--insight-bg);
+  border-left: 3px solid var(--accent);
+  padding: 14px 16px;
+  border-radius: 0 10px 10px 0;
+}
+
+.anomaly-block {
+  background-color: var(--anomaly-bg);
+  border-left: 3px solid var(--color-negative);
+  padding: 14px 16px;
+  border-radius: 0 10px 10px 0;
+}
+
+/* Progress bar */
+.progress-bar-bg {
+  background: rgba(34, 81, 255, 0.1);
+  height: 6px;
+  border-radius: 3px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  background: var(--accent);
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+/* Table Header & Cells */
+.table-header {
+  background-color: var(--table-header-bg);
+  color: var(--brand);
+  font-size: 11px;
+  letter-spacing: var(--tracking-label);
+  font-weight: 600;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.data-cell {
+  font-size: 13px;
+  color: var(--brand);
+}
+
+.interactive-cell {
+  transition: transform var(--dur-fast) var(--ease-standard), filter var(--dur-fast) var(--ease-standard);
+}
+
+.interactive-cell:hover {
+  transform: scale(1.02);
+  filter: brightness(1.04);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp var(--dur-normal) cubic-bezier(0.0, 0.0, 0.2, 1.0) both;
+}
+
