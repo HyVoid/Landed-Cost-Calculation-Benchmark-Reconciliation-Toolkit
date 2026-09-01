@@ -245,6 +245,43 @@ Instead of a vague *"The API calculation is wrong,"* this template generates an 
 
 > **"Variance attributed to allocation-basis mismatch: 3PL utilized Gross Weight vs Internal Policy utilizing Commercial Value."**
 
+</details>
+
+---
+
+## The Business Logic & Methodology
+
+### The Core Business Problem
+Most supply chain networks and enterprise ERP systems treat landed cost as a simple arithmetic exercise—taking a consolidated freight bill and dividing it across imported units. However, landed cost is fundamentally a **strategic cost accounting decision**. 
+
+When third-party logistics (3PL) APIs or black-box SaaS platforms output a final SKU cost, they obscure the underlying allocation logic. If heavy, low-value items share a shipping container with light, high-value items, applying the wrong allocation basis (e.g., distributing ocean freight by Commercial Value instead of Volume/CBM) severely distorts your unit economics. This method opacity leads to underpriced heavy goods, overpriced lightweight goods, and systemic margin erosion that traditional invoice auditing cannot detect.
+
+### The Practitioner Methodology
+This toolkit replaces the "black-box trust" model with an **Activity-Based Costing (ABC) and Multi-Tier Reconciliation framework**. 
+
+The methodology is executed through three logical phases to ensure financial compliance and accurate inventory valuation:
+
+1. **Decoupled Cost Driver Mapping (The Rule Engine):** 
+   Instead of applying a flat percentage multiplier to all goods, the toolkit mandates that every external cost pool is explicitly mapped to its true physical or financial driver. 
+   * *Ocean & Air Freight* are driven by spatial consumption (Volume/CBM or Dim Weight).
+   * *Drayage & Inland Trucking* are driven by payload constraints (Gross Weight).
+   * *Customs Duties & Tariffs* are driven by statutory tax assessments (Customs Value / FOB).
+   * *Marine Insurance* is driven by financial risk exposure (Commercial Value).
+   
+2. **Independent Shadow Calculation (The Benchmark):** 
+   Before accepting an external API's numbers into your ERP, the workbook generates a localized "shadow" benchmark. It calculates what the exact SKU-level Cost of Goods Sold (COGS) *should* be, strictly adhering to your company's declared accounting policies (e.g., GAAP / ASC 330 / IAS 2).
+
+3. **Three-Tier Variance Diagnosis (The Audit):**
+   The system does not simply check if the grand total matches the invoice. It forces a reconciliation at three distinct organizational levels:
+   * **Macro (Shipment Level):** Does the aggregate cash outflow match the freight bill?
+   * **Meso (Category Level):** Did the forwarder accurately assess duty vs. freight vs. handling, or are costs bleeding across categories?
+   * **Micro (SKU Level):** Was a specific product burdened with a disproportionate share of the logistics cost, thereby destroying its gross margin?
+
+### The Strategic Outcome
+By shifting the focus from *arithmetic verification* (do the numbers match?) to *methodological auditing* (was the correct business rule applied?), finance and operations teams regain control over their supply chain data. This logic ensures that consumer pricing strategies and margin analyses are based on the true economic burden of importing a product, rather than a generalized average.
+
+---
+
 ## Explore More Financial & Operations Toolkits
 
 * **Construction & Operations Toolkits** — Excel-based controls for project cost tracking, profitability forecasting, and job-site operational workflows.
