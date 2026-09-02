@@ -12,7 +12,7 @@
 > 
 > [🌐 Try the Free Landed Cost Browser Calculator](https://hyvoid.github.io/landed-cost-calculator-excel/)
 > 
-> [📥 Download the Offline Landed Cost Excel Template](https://alexhasgreatestuff.gumroad.com/l/adxwd)
+> [📥 Download the Offline Landed Cost Excel Template](https://www.theseusworkshop.com/l/adxwd)
 
 
 ## Common Supply Chain Pain Points & Landed Cost Solutions
@@ -49,7 +49,7 @@ Follow this workflow to audit your freight bills and validate unit costs efficie
    Load new test cases without breaking the underlying calculation architecture. Update your source data, refresh the dashboard comparison, and only spend time reviewing the specific invoice variances that trigger a tolerance alert.
 
 5. **Step 5: Standardize Your Workflow.**
-   👉 **Ready to audit shipments at scale?** Don't start from scratch every time. [📥 Download the reusable Landed Cost Excel Template](https://alexhasgreatestuff.gumroad.com/l/adxwd) to securely save your historical reconciliation data, automate your monthly freight audits, and standardize your company's cost allocation methodology.
+   👉 **Ready to audit shipments at scale?** Don't start from scratch every time. [📥 Download the reusable Landed Cost Excel Template](https://www.theseusworkshop.com/l/adxwd) to securely save your historical reconciliation data, automate your monthly freight audits, and standardize your company's cost allocation methodology.
 
 ## Why I Built This Cost Allocation Tool
 
