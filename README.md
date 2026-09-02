@@ -10,7 +10,7 @@
 
 > **Try the free web-based landed cost calculator. If you need the offline Excel version for your permanent records, audit trails, and repeated monthly use, you can buy it with a 30-day, no-questions-asked money-back guarantee.**
 > 
-> [🌐 Try the Free Landed Cost Browser Calculator](./index.html)
+> [🌐 Try the Free Landed Cost Browser Calculator](https://hyvoid.github.io/landed-cost-calculator-excel/)
 > 
 > [📥 Download the Offline Landed Cost Excel Template](./Landed-Cost-Benchmark-Reconciliation-Toolkit.xlsx)
 
